@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <title>My React Application</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script>
+    function MyApp() {
+      let myHeading = React.createElement("h1", null, "Contact List");
+      let myList = React.createElement(
+        "ul",
+        null,
+        React.createElement(
+          "li",
+          null,
+          React.createElement(
+            "p",
+            { style: { color: "coral", fontSize: "26px", marginBlock: "6px" } },
+            "Facebook"
+          ),
+          React.createElement("a", { href: "#" }, "www.facebook.com")
+        ),
+        React.createElement(
+          "li",
+          null,
+          React.createElement(
+            "p",
+            { style: { color: "Red", fontSize: "26px", marginBlock: "6px" } },
+            "Instagram"
+          ),
+          React.createElement("a", { href: "#" }, "www.instagram.com")
+        ),
+        React.createElement(
+          "li",
+          null,
+          React.createElement(
+            "p",
+            { style: { color: "green", fontSize: "26px", marginBlock: "6px" } },
+            "Whatsapp"
+          ),
+          React.createElement("a", { href: "#" }, "web.whatsapp.com")
+        )
+      );
+      let myDiv = React.createElement("div", null, myHeading, myList);
+
+      return myDiv;
+    }
+
+    ReactDOM.render(
+      React.createElement(MyApp),
+      document.querySelector("#root")
+    );
+  </script>
+</html>

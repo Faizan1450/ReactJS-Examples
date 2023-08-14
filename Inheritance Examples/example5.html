@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance example</title>
+  </head>
+  <body></body>
+  <script>
+    class Vehicle {
+      constructor() {
+        document.write("Vehicle constructor called... <br>");
+      }
+      accelarate() {
+        document.write("Accelarating.... <br>");
+      }
+    }
+    class Car extends Vehicle {
+      constructor() {
+        document.write("Car Constructor called... <br>");
+        super(); // Not at first line but working
+      }
+      reverse() {
+        document.write("Reversing...");
+      }
+    }
+    let myCar = new Car();
+    myCar.accelarate();
+    myCar.reverse();
+    document.write("Color of car: " + myCar.color);
+  </script>
+</html>

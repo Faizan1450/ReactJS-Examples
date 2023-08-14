@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Use Function as Object</title>
+  </head>
+  <body>
+    <!-- Use Function as Object -->
+  </body>
+  <script>
+    function Greetings(username) {
+      //   Destructuring of function, as functions are objects in js
+      let message = Greetings.message;
+      document.write(message + ": " + username);
+    }
+
+    Greetings.message = "Welcome";
+    Greetings("Faizan");
+  </script>
+</html>

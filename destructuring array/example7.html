@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring array</title>
+  </head>
+  <body></body>
+  <script>
+    let person = ["Faizan", 25, 25000, ...["B.Tech", "MBA", "PHD"]];
+    // Ulternate solution is using spread operator
+    let [name, age, salary, deg1, deg2, deg3] = person;
+
+    document.write("Name is: " + name + "<br>");
+    document.write("Age is: " + age + "<br>");
+    document.write("Salary is: " + salary + "<br>");
+    document.write("Degree1 is: " + deg1 + "<br>");
+    document.write("Degree2 is: " + deg2 + "<br>");
+    document.write("Degree3 is: " + deg3 + "<br>");
+  </script>
+</html>

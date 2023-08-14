@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>props Exampls</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script type="text/babel">
+    function Greetings({ who, from }) {
+      return (
+        <h2>
+          Happy EID-ul-Adha to {String(who)} from {String(from)}
+        </h2>
+      );
+    }
+
+    let myDiv = document.querySelector("#root");
+    let root = ReactDOM.createRoot(myDiv);
+    // if we don't pass any thing to attributes than react will asign boolean true
+    root.render(<Greetings who from />);
+  </script>
+</html>

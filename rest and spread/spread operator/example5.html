@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread operator example</title>
+  </head>
+  <body></body>
+  <script>
+    function add(...args) {
+      let sum = 0;
+      for (const x of args) {
+        sum += x;
+      }
+      //   Still faced problem, we need to spread array
+      document.write("Sum is: " + sum + "<br>");
+    }
+
+    let arr = [10, 20, 30];
+    add(...arr);
+  </script>
+</html>

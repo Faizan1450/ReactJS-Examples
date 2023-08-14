@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring Objects in JavaScript</title>
+  </head>
+  <body></body>
+  <script>
+    let person = { name: "Faizan", age: 23, salary: 33000 };
+
+    // Variables name can be change
+    let { name: ename, age: eage, salary: esalary } = person;
+
+    document.write("Name is: " + ename + "<br>");
+    document.write("Age is: " + eage + "<br>");
+    document.write("Salary is: " + esalary + "<br>");
+  </script>
+</html>

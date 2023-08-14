@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread operator example</title>
+  </head>
+  <body></body>
+  <script>
+    let vowels1 = ["A","E","I","O","U"]; //Its working normally
+    document.write(vowels1 + "<br>");
+
+    let vowels2 = ["A", "EIOU"]; //This will not work as expected
+    document.write(vowels2 + "<br>");
+
+    // Only work with array 
+    let vowels3 = ["A", ..."EIOU"]; //Here is the use of spread operator
+    document.write(vowels3+ "<br>");
+  </script>
+</html>

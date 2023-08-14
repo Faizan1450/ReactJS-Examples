@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Examples</title>
+  </head>
+  <body></body>
+  <script>
+    class Emp {
+      static company = "Google";
+      constructor(name, salary) {
+        this.name = name;
+        this.salary = salary;
+      }
+      show() {
+        document.write(
+          this.name + " " + this.salary + " " + Emp.company + "<br>"
+        );
+      }
+      static changeCompany() {
+        //Both statements are correct from inside static method
+        this.company = "Facebook";
+        // Emp.company = "Adobe";
+      }
+    }
+
+    let e1 = new Emp("Faizan", 35000);
+    let e2 = new Emp("Faizan", 35000);
+    e1.show();
+    e2.show();
+
+    Emp.changeCompany(); // Will change value in class object area,will reflect for every  object
+
+    e1.show();
+    e2.show();
+  </script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 1: Circle program</title>
+  </head>
+  <body></body>
+  <script>
+    class Circle {
+      constructor(radius) {
+        this.radius = radius;
+      }
+      area() {
+        return Math.PI * Math.pow(this.radius, 2);
+      }
+    }
+
+    class Cylinder extends Circle {
+      constructor(radius, heigth) {
+        super(radius);
+        this.heigth = heigth;
+      }
+      area() {
+        return 2 * (Math.PI * this.radius * this.heigth + super.area());
+        // cannot write super.radius
+        // "Parent class data cannot be access using super, only methods can be"
+      }
+
+      volume() {
+        return super.area() * this.heigth;
+      }
+    }
+
+    let myCylinder = new Cylinder(10, 20);
+    document.write("Area is: " + myCylinder.area());
+    document.write("<br>");
+    document.write("Volume is: " + myCylinder.volume());
+  </script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest parameter V/S Arguments object</title>
+  </head>
+  <body></body>
+  <script>
+    // rest paramerter & arguments object
+    // Both will behave same but they are not same
+    function show1(...args) {
+      document.write("Using rest parameter<br>");
+      for (let i = 0; i < args.length; i++) {
+        document.write(args[i] + "<br>");
+      }
+    }
+    function show2() {
+      document.write("Using argument object<br>");
+      for (let i = 0; i < arguments.length; i++) {
+        document.write(arguments[i] + "<br>");
+      }
+    }
+
+    show1(10, 20, 30);
+    show2(10, 20, 30);
+  </script>
+</html>

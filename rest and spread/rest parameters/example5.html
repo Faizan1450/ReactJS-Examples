@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest parameter example</title>
+  </head>
+  <body></body>
+  <script>
+    function marksheet(name, ...args) {
+      totalMarks = 0;
+      for (const marks of args) {
+        totalMarks += marks;
+      }
+      document.write("Name: " + name + " & Total Marks: " + totalMarks + "<br>");
+    }
+
+    marksheet("Faizan", 10, 20);
+    marksheet("Fardeen", 10, 20, 30);
+    marksheet("Ankit", 10, 20, 30, 40);
+  </script>
+</html>

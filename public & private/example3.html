@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public & Private Examples</title>
+  </head>
+  <body></body>
+  <script>
+    class Data {
+      a = 10; // public property
+      #b = 20; // Now #b will be a private data member
+    }
+
+    let obj = new Data();
+    // cannot access #b outside the class
+    // document.write(obj.a + " " + obj.#b); 
+  </script>
+</html>

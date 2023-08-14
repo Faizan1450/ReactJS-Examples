@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public & Private Examples</title>
+  </head>
+  <body></body>
+  <script>
+    class Data {
+      constructor() {
+        this.a = 10;
+        this.#b = 20; // Error, private property must be declared at class level
+      }
+      show() {
+        document.write(this.a + " " + this.#b);
+      }
+    }
+
+    let obj = new Data();
+    obj.show();
+  </script>
+</html>

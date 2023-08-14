@@ -1,0 +1,1 @@
+console.log("This is module.js, let check this value: " + this);

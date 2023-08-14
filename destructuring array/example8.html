@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring array</title>
+  </head>
+  <body></body>
+  <script>
+    // Destructuring in functions return type
+
+    function calculate(a, b) {
+      let sum = a + b;
+      let product = a * b;
+
+      return [sum, product];
+    }
+
+    let [sum, product] = calculate(10,20);
+    document.write("Sum is: " + sum + "<br>");
+    document.write("Product is: " + product);
+  </script>
+</html>

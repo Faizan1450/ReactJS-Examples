@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Examples</title>
+  </head>
+  <body></body>
+  <script>
+    class Emp {
+      constructor(name, salary, company) {
+        this.name = name;
+        this.salary = salary;
+        this.company = company;
+      }
+    }
+
+    // When we need same value in every variable, then can create it static
+    let e1 = new Emp("Faizan", 35000, "Google");
+    document.write(e1.name + " " + e1.salary + " " + e1.company);
+    document.write("<br>");
+    let e2 = new Emp("Faizan", 35000, "Google");
+    document.write(e2.name + " " + e2.salary + " " + e2.company);
+  </script>
+</html>

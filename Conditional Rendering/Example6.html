@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Conditional Rendering Example</title>
+    <title>JSX Example using Switch</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script type="text/babel">
+    function getRandNum() {
+      let myNums = [3, 7, 11, 12, 8, 14, 19, 22, 89, 21];
+      let index = Math.floor(Math.random() * myNums.length);
+      return myNums[index];
+    }
+
+    function MyApp() {
+      let randNum = getRandNum();
+      let msg = null;
+      switch (randNum % 2 == 0) {
+        case true:
+          msg = <small>It is an Even Number</small>;
+          break;
+        default:
+          msg = <small>It is a Odd Number</small>;
+      }
+
+      return (
+        <div>
+          <p>The number is: {randNum}</p>
+          {msg}
+        </div>
+      );
+    }
+
+    ReactDOM.render(<MyApp />, document.querySelector("#root"));
+  </script>
+</html>

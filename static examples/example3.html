@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Examples</title>
+  </head>
+  <body></body>
+  <script>
+    class Emp {
+      static company = "Google";
+      constructor(name, salary) {
+        this.name = name;
+        this.salary = salary;
+      }
+      // Dedicated method for calling show
+      // use Emp.company here as well
+      show() {
+        document.write(`${this.name}, ${this.salary}, ${Emp.company}`);
+      }
+    }
+
+    let e1 = new Emp("Faizan", 35000);
+    e1.show();
+    document.write("<br>");
+    let e2 = new Emp("Faizan", 35000);
+    e2.show();
+  </script>
+</html>

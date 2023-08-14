@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance example</title>
+  </head>
+  <body></body>
+  <script>
+    class Emp {
+      constructor(name, salary) {
+        this.name = name;
+        this.salary = salary;
+      }
+      toString() {
+        return `${this.name}, ${this.salary}`;
+      }
+    }
+
+    class Manager extends Emp {
+      constructor() {
+        //Super must be here
+        this.bonus = 25000;
+      }
+      toString() {
+        return `${this.name}, ${this.salary}, ${this.bonus}`;
+      }
+    }
+
+    let boss = new Manager("Faizan", 60000);
+    document.write(boss);
+  </script>
+</html>

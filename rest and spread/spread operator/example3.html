@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread operator example</title>
+  </head>
+  <body></body>
+  <script>
+    function add(a, b) {
+      let sum = a + b; // what if arguments are less, then array values will dropped
+      document.write("Sum is: " + sum + "<br>");
+    }
+
+    let arr = [10, 20, 30];
+    add(...arr);    //spread operator
+  </script>
+</html>

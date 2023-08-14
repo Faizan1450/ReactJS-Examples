@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>JSX Example</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script type="text/babel">
+    function MyContactList() {
+      let myHeading = <h1>Contacts</h1>;
+      let myList = (
+        <ul>
+          <li>Mr. Sachin Kapoor</li>
+          <li>Mr. Paramjeet Singh</li>
+          <li>Syed Faizan Ali</li>
+        </ul>
+      );
+      let myDiv = (
+        <div>
+          {myHeading}
+          {myList}
+        </div>
+      );
+      return myDiv;
+    }
+
+    ReactDOM.render(<MyContactList />, document.querySelector("#root"));
+  </script>
+</html>

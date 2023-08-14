@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <title>My React Application</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script>
+    function MyApp() {
+      let myHeading = React.createElement("h1", null, "What is React?");
+      let myPara = React.createElement(
+        "p",
+        null,
+        "React is a component based JS Library"
+      );
+      let myDiv = React.createElement("div", null, myHeading, myPara);
+      return myDiv;
+    }
+    let div = document.querySelector("#root");
+    ReactDOM.render(React.createElement(MyApp), div);
+  </script>
+</html>

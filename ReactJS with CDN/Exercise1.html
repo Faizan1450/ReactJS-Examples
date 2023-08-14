@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <title>My React Application</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script>
+    function MyApp() {
+      let myHeading = React.createElement("h1", null, "Contact List");
+      let myPara = React.createElement(
+        "p",
+        null,
+        "React is a component based JS Library used by: "
+      );
+      let myList = React.createElement(
+        "ul",
+        null,
+        React.createElement("li", null, "Facebook"),
+        React.createElement("li", null, "Instagram"),
+        React.createElement("li", null, "Whatsapp")
+      );
+      let myDiv = React.createElement("div", null, myHeading, myPara, myList);
+
+      return myDiv;
+    }
+
+    ReactDOM.render(
+      React.createElement(MyApp),
+      document.querySelector("#root")
+    );
+  </script>
+</html>

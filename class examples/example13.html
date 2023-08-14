@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Examples</title>
+  </head>
+  <body></body>
+  <script>
+    class Emp {
+      constructor(name, salary) {
+        this.ename = name;
+        this.salary = salary;
+      }
+      raiseSalary() {
+        this.salary = this.salary + (this.salary * 10) / 100;
+      }
+    }
+    let e1 = new Emp("Faizan", 35000);
+    let e2 = new Emp("Ankit", 45000);
+
+    document.write("Before Incrementing <br>");
+
+    document.write(e1.ename + ", " + e1.salary);
+    document.write("<br>");
+    document.write(e2.ename + ", " + e2.salary);
+
+    document.write("<br>");
+    document.write("After Incrementing <br>");
+    e1.raiseSalary();
+    e2.raiseSalary();
+    document.write(e1.ename + ", " + e1.salary);
+    document.write("<br>");
+    document.write(e2.ename + ", " + e2.salary);
+  </script>
+</html>

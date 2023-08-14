@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest parameter example</title>
+  </head>
+  <body></body>
+  <script>
+    // Rest parameter
+    function add(...args) {
+      document.write(args + "<br>");    //stored all arguments in array "args"
+    }
+    add(10, 20);
+    add(10, 20, 30);
+    add(10, 20, 30, 40);
+    add(10, 20, 30, 40, 50);
+  </script>
+</html>

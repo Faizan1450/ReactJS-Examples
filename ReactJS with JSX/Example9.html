@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock using vanilla JavaScript</title>
+    <style>
+      h1 {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script>
+    function clock() {
+      let myDiv = document.querySelector("#root");
+
+      let myHeading = `<h1>My Clock Component</h1>`;
+      let myPara = `<p>Current date and time are ${new Date().toLocaleString()}</p>`;
+
+      myDiv.innerHTML = `<div>${myHeading}${myPara}</div>`;
+    }
+    setInterval(clock, 1000);
+  </script>
+</html>

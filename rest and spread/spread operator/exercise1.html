@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise: function calculate</title>
+  </head>
+  <body></body>
+  <script>
+    function calculate(a = 0, b = 1, ...args) {
+      let sum = 0;
+      for (const x of args) {
+        sum += x;
+      }
+      document.write(a * b + " " + sum + "<br>");
+    }
+    calculate(5, 7, 15, 9); //35, 24
+    calculate(2, 4, 10); //8, 10
+    calculate(10, 20, 30, 40, 50); //200, 120
+    calculate(6, 9); //54 0
+    calculate(5); //5
+    calculate();  
+  </script>
+</html>

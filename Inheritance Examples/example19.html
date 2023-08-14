@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance example</title>
+  </head>
+  <body></body>
+  <script>
+    class Person {
+      constructor(fname, lname) {
+        this.fname = fname;
+        this.lname = lname;
+      }
+    }
+
+    // Why we need setter and getter
+    let p = new Person("Faizan", "Ali");
+    document.write("First Name: " + p.fname);
+    document.write("<br>");
+    document.write("Last Name: " + p.lname);
+  </script>
+</html>
